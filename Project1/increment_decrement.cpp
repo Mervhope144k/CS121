@@ -8,7 +8,7 @@ int main()
 	int x, y;
 	x = 5;
 	cout << " x = " << x << endl;
-	y = --x;
+	y = 2 + (x++);
 	cout << " x = " << x << endl;
 	cout << " y = " << y << endl;
 	return 0;
