@@ -2,15 +2,15 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 //
-// File Name         :
+// File Name         : cs121Lab3_driver.cpp
 //
-// This program
+// This program      : This program determines the student's grade.
 //
-// Programmer        : B.J. Streller AND WHO ARE YOU ???????????????
+// Programmer        : B.J. Streller AND M.B Katumba
 //
-// Date Written      :
+// Date Written      : 9/19/23
 //
-// Date Last Revised :
+// Date Last Revised : 9/25/23
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -92,26 +92,19 @@ int  main( )
 
     cout << endl;
 
-
-
-
-
 ////////////////calculates the average of the three tests that the user entered
 
     //local variable declarations
 
-    double sum = 0.0,				// sum of the tests
-           ave = 0.0;				// average of tests
+    double sum = 0.0,				    // sum of the tests
+           ave = 0.0,                   // average of tests
+        sum_Of_t2_t3 = 0.0,             // sun of test2 and test3
+        ave_Of_t2_t3 = 0.0;		        // average of test2 and test3
 
-    sum = t1 + t2 + t3 ;			// compute sum of tests
-    ave = sum / 3.0;				// compute average
-
-    Average_Of_Tests = ave;
-
-
-
-
-
+    sum = t1 + t2 + t3 ;			    // compute sum of tests
+    ave = sum / 3.0;				    // compute average
+    sum_Of_t2_t3 = t2 + t3;             // compute the sum of test2 and test3
+    ave_Of_t2_t3 = sum_Of_t2_t3 / 2.0;  // compute average of test2 and test3
 
 ////////////////determines the course grade from Average_Of_Tests
 
@@ -119,27 +112,32 @@ int  main( )
 
 
     // 'A' grade determination
-    //YOU ADD YOUR CODE HERE
-
+    if (ave >= 90)
+        grd = 'A';
 
     // 'A'-'B' range grade determination
-    //YOU ADD YOUR CODE HERE
-
+    else
+        if (ave >= 70 && ave < 90)
+            if (t3 >= 90)
+                grd = 'A';
+            else
+                grd = 'B';
 
     // 'C'-'D' range grade determination
-    //YOU ADD YOUR CODE HERE
-
+        else
+            if (ave >= 50 && ave < 70)
+                if (ave_Of_t2_t3 >= 70)
+                    grd = 'C';
+                else
+                    grd = 'D';
 
     // 'F' grade determination
-    //YOU ADD YOUR CODE HERE
 
+            else
+                grd = 'F';
+    
     Grade = grd;  //set grd to Grade
-
-
-
-
-
-
+    Average_Of_Tests = ave; // set ave to Average_Of_Tests
 
 ////////////////prints data echo, test average (two decimal places)
 ////////////////and the course grade
@@ -161,16 +159,7 @@ int  main( )
     // print final grade
     cout << " Your course grade is "<< Grade << "."<< "\n\n\n";
 
-
-
-
-
-
     return 0;
-
-
 }
-
-
 ////////////////////////////////////////////////////////////////////////////////////////////
 
