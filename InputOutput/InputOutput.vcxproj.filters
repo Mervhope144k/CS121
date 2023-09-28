@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="leftRight.cpp">
+    <ClCompile Include="LogicError.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
