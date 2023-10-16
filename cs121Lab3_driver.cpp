@@ -10,7 +10,7 @@
 //
 // Date Written      : 9/19/23
 //
-// Date Last Revised : 9/25/23
+// Date Last Revised : 10/03/23
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -19,6 +19,7 @@
 
 #include <iostream>					// need cin,cout,etc.
 #include <iomanip>					// need setf,precision
+#include <string>                   // need string class
 
 using namespace std;
 
@@ -30,6 +31,8 @@ int     t1,							// test 1 grade
         t3;							// test 3 grade
 double  Average_Of_Tests = 0.0;		// average of tests
 char    Grade;						// course grade
+string f_name;                      // first name
+string l_name;                      // last name
 
 
 
@@ -39,7 +42,13 @@ char    Grade;						// course grade
 
 int  main( )
 {
-
+/////prompt user for their first name and last name;
+    cout << " Enter your First name: ";
+    cin >> f_name;
+    cout << endl;
+    cout << " Enter your Last name: ";
+    cin >> l_name;
+    cout << endl;
 ////////////////prompt user for three test scores; validates entries;
 ////////////////prints any re-entered scores
 
@@ -146,7 +155,8 @@ int  main( )
     cout.setf(ios::fixed|ios::showpoint);		// show the decimal point
     cout << setprecision(2);					// show two decimal places
 
-
+    // print user full name
+    cout << " \n " << f_name << " " << l_name << "\n\n";
     // data echo
     cout << " You have entered the following three test grades : "
          << " \n " << t1 << " for test 1, " << t2 << " for"
@@ -162,4 +172,26 @@ int  main( )
     return 0;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////
+/*
+ Enter your First name: Merveilles
+
+ Enter your Last name: Katumba
+
+
+
+ Please enter your score from test 1 : 90
+ Please enter your score from test 2 : 90
+ Please enter your score from test 3 : 100
+
+
+ Merveilles Katumba
+
+ You have entered the following three test grades :
+ 90 for test 1, 90 for test 2, and 100 for test 3,
+
+  The average of the three tests that you entered is : 93.33
+
+  Your course grade is A.
+
+*/
 

@@ -19,6 +19,7 @@
 
 #include <iostream>					// need cin,cout,etc.
 #include <iomanip>					// need setf,precision
+#include <string>
 
 using namespace std;
 
@@ -39,7 +40,13 @@ char    Grade;						// course grade
 
 int  main( )
 {
-
+    ////////////////prompt user for to enter their first name and last name;
+    cout << "Enter your first name: ";
+    cin >> f_name;
+    cout << endl;
+    cout << "Enter your last name: ";
+    cin >> l_name;
+    cout << endl;
 ////////////////prompt user for three test scores; validates entries;
 ////////////////prints any re-entered scores
 
@@ -146,7 +153,9 @@ int  main( )
     cout.setf(ios::fixed|ios::showpoint);		// show the decimal point
     cout << setprecision(2);					// show two decimal places
 
-
+    // print full name
+    cout << "Your full name is: "
+        << f_name << " " << l_name << "\n\n ";
     // data echo
     cout << " You have entered the following three test grades : "
          << " \n " << t1 << " for test 1, " << t2 << " for"
