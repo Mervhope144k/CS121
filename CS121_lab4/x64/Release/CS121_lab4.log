@@ -1,0 +1,5 @@
+﻿  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 16 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  CS121_lab4.vcxproj -> D:\CS121\CS121_lab4\x64\Release\CS121_lab4.exe
