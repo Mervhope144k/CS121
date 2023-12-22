@@ -1,0 +1,3 @@
+C:\Users\katumbm053\OneDrive - Erie Community College\C121\cs121_P2\accounts.txt
+C:\Users\katumbm053\OneDrive - Erie Community College\C121\cs121_P2\transactions.txt
+C:\Users\katumbm053\OneDrive - Erie Community College\C121\cs121_P2\monthly_report.txt

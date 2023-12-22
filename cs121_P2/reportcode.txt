@@ -1,0 +1,23 @@
+cout << "Please enter the path to the monthly report file" << endl;
+reportFile = getFileName();
+openFile(reportFile, InOutFile);
+if (!InOutFile) {
+    std::cerr << "Error creating report file!" << std::endl;
+    return 1;
+}
+
+for (int i = 0; i < numAccounts; ++i) {
+    InOutFile << "Name: " << accounts[i].name << "\n";
+    InOutFile << "Account Number: " << accounts[i].acct_num << "\n";
+    InOutFile << "Beginning Balance: $" << fixed << setprecision(2) << accounts[i].acct_bal << "\n";
+    double endingBalance = accounts[i].acct_bal + totalDeposits[i] - totalWithdrawals[i];
+    InOutFile<< "Ending Balance: $" << fixed << setprecision(2) << endingBalance << "\n";
+    InOutFile << "Amount Deposited: $" << fixed << setprecision(2) << totalDeposits[i] << "\n";
+    InOutFile << "Number of Deposits: " << numDeposits[i] << endl;
+    InOutFile << "Amount Withdrawn: $" << fixed << setprecision(2) << totalWithdrawals[i] << "\n";
+    InOutFile << "Number of Withdrawals: " << numWithdrawals[i] << endl << endl;
+}
+
+InOutFile.close();
+
+std::cout << "Monthly report generated successfully!" << std::endl;
